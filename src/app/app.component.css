@@ -1,0 +1,27 @@
+.blob{
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  aspect-ratio: 1;
+  z-index: -100;
+  border-radius: 50%;
+  left:50%;
+  top:50%;
+  translate: -50% -50%;
+  background: linear-gradient(
+    to right,
+    aquamarine,
+  );
+}
+
+@keyframes rotate {
+  from{
+    rotate: 0deg;
+  }
+  50%{
+    scale: 1 1.5;
+  }
+  to{
+    rotate: 360deg;
+  }
+}

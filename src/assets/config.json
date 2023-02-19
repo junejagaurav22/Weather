@@ -1,5 +1,5 @@
 {
   "endpoint": {
-    "bffBaseUrl": "https://api.api-ninjas.com/v1/weather"
+    "bffBaseUrl": "https://api.openweathermap.org/data/2.5/weather?"
   }
 }

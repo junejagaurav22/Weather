@@ -26,7 +26,6 @@ a{
 }
 a:hover{
   cursor: pointer;
-  background-color: rgba(0, 0, 255, 0.833);
   color: white;
 }
 .navbar .right-content ul{
