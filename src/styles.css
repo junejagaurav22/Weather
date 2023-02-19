@@ -4,5 +4,9 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  cursor: none;
+}
+body {
+  background-color: black;
+  overflow: hidden;
+
 }

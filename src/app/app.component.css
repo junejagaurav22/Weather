@@ -1,9 +1,8 @@
 .blob{
-  height: 50px;
+  height: 150px;
   background-color: blue;
   position: absolute;
   aspect-ratio: 1;
-  z-index: -100;
   border-radius: 50%;
   left:50%;
   top:50%;
@@ -11,7 +10,11 @@
   background: linear-gradient(
     to right,
     aquamarine,
+    purple
   );
+  animation: 20s rotate infinite;
+  filter: blur(100px);
+  overflow: hidden;
 }
 
 @keyframes rotate {

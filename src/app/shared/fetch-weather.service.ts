@@ -10,10 +10,10 @@ import { WeatherResponse } from './shared.interface.ts/interface.Interface';
 export class FetchWeatherService {
   constructor(private http: HttpClient) {}
 
-  fetchData(cityName: string): Observable<WeatherResponse> {
+  fetchData(lat: number, lon: number): Observable<WeatherResponse> {
     const url =
       config.endpoint.bffBaseUrl +
-      `q=${cityName}&appid=16eb548a98aee0b1486ac767ebf022a0`;
+      `lat=${lat}&lon=${lon}&appid=16eb548a98aee0b1486ac767ebf022a0&&units=metric`;
     return this.http.get<any>(url);
   }
 }

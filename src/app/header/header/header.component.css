@@ -14,6 +14,7 @@
 
 .navbar .left-content h2 {
   padding-left: 10px;
+  color: white;
 }
 .navbar .left-content img {
   height: 30px;
@@ -22,7 +23,7 @@
 
 a{
   text-decoration: none;
-  color: black;
+  color: white;
 }
 a:hover{
   cursor: pointer;
