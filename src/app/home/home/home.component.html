@@ -8,7 +8,7 @@
           [width]="13"
           [height]="14"
         />
-        <span>{{ weatherResponse.name }}</span>
+        <span>{{ weatherResponse?.name }}</span>
       </div>
     </div>
     <div class="content">
@@ -16,27 +16,30 @@
         <img [src]="img" alt="" />
       </div>
       <div class="temp">
-        <h1>{{ weatherResponse.main.temp }}&#176;</h1>
+        <h1>{{ weatherResponse?.main?.temp }}&#176;</h1>
       </div>
       <div class="wind">
         <span
-          ><h1>{{ weatherResponse.wind.speed }}</h1>mph</span>
+          ><h1>{{ weatherResponse?.wind?.speed }}</h1>mph</span>
       </div>
     </div>
     <div class="footer">
-      <div class="weather">
+      <div class="weather" *ngIf="weatherResponse">
         {{ weatherResponse.weather[0].main }}
       </div>
       <div class="temp">
         <h3>
-          {{ weatherResponse.main.temp_max }}&#176;/{{
-            weatherResponse.main.temp_min
+          {{ weatherResponse?.main?.temp_max }}&#176;/{{
+            weatherResponse?.main?.temp_min
           }}20&#176;
         </h3>
       </div>
       <div class="wind">
-        <h3>S: {{ weatherResponse.wind.speed }}mph</h3>
+        <h3>S: {{ weatherResponse?.wind?.speed }}mph</h3>
       </div>
     </div>
+  </div>
+  <div class="search">
+    <input type="text" (keypress)="fetchWeather($event)" class="search1">
   </div>
 </div>

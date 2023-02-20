@@ -69,10 +69,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
-.wind span h1{
+.wind span h1 {
   display: inline;
 }
 
@@ -81,7 +81,42 @@
   height: 100px;
 }
 
-
 .content h1 {
-  font-size: 100px;
+  font-size: 90px;
+}
+
+.search {
+  margin-top: 50px;
+  z-index: 100;
+}
+
+.search1 {
+  width: 20px;
+  height: 40px;
+}
+.search1:not(:focus) {
+  width: 20px;
+  animation: shrink 1s;
+}
+.search1:focus {
+  width: 170px;
+  animation: expand 1s;
+}
+
+@keyframes expand {
+  from {
+    width: 20px;
+  }
+  to {
+    width: 170px;
+  }
+}
+
+@keyframes shrink {
+  from {
+    width: 170px;
+  }
+  to {
+    width: 20px;
+  }
 }
